@@ -5,22 +5,32 @@ import CARD_DATA from "../assets/CARD_DATA.JSX";
 function Cards() {
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, toggleFlipped] = useState(false);
+  const [prevCard, setPrevCard] = useState(0);
 
   const difficulty = CARD_DATA[currentCard].difficulty;
 
-  const handleNextCard = () => {
-    if (currentCard < 10) {
-      setCurrentCard((card) => card + 1);
+  let randomNum = 0;
+
+  // Ensures that the same number cannot be random generated consecutively
+  const generateUniqueRandom = () => {
+    randomNum = 1 + Math.round(Math.random() * 9);
+    while (randomNum === prevCard) {
+      randomNum = 1 + Math.round(Math.random() * 9);
     }
+  };
+
+  const handleNextCard = () => {
+    generateUniqueRandom();
+    setCurrentCard((c) => randomNum);
+    setPrevCard(randomNum);
     if (isFlipped) {
       toggleFlipDirection();
     }
   };
 
-  const handlePreviousCard = () => {
-    if (currentCard > 0) {
-      setCurrentCard((card) => card - 1);
-    }
+  //Displays the original "START" card
+  const handleRefresh = () => {
+    setCurrentCard(0);
     if (isFlipped) {
       toggleFlipDirection();
     }
@@ -33,7 +43,7 @@ function Cards() {
   return (
     <>
       <div className="cards-wrapper">
-        <h1>Card Counter: {currentCard + 1}</h1>
+        <h1>Card #{currentCard + 1}</h1>
         <div
           className={`card-container ${difficulty}`}
           onClick={toggleFlipDirection}
@@ -49,8 +59,8 @@ function Cards() {
           </h1>
         </div>
         <div className="btn-container">
-          <button onClick={handlePreviousCard} className="card-btn">
-            ←
+          <button onClick={handleRefresh} className="card-btn">
+            &#8634;
           </button>
           <button onClick={handleNextCard} className="card-btn">
             →
