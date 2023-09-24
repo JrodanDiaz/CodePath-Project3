@@ -6,9 +6,11 @@ function Cards() {
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, toggleFlipped] = useState(false);
 
+  const difficulty = CARD_DATA[currentCard].difficulty;
+
   const handleNextCard = () => {
     if (currentCard < 10) {
-      setCurrentCard(currentCard + 1);
+      setCurrentCard((card) => card + 1);
     }
     if (isFlipped) {
       toggleFlipDirection();
@@ -17,7 +19,7 @@ function Cards() {
 
   const handlePreviousCard = () => {
     if (currentCard > 0) {
-      setCurrentCard(currentCard - 1);
+      setCurrentCard((card) => card - 1);
     }
     if (isFlipped) {
       toggleFlipDirection();
@@ -25,15 +27,21 @@ function Cards() {
   };
 
   const toggleFlipDirection = () => {
-    toggleFlipped(!isFlipped);
+    toggleFlipped((flipped) => !flipped);
   };
 
   return (
     <>
       <div className="cards-wrapper">
         <h1>Card Counter: {currentCard + 1}</h1>
-        <h1>Is Flipped: {isFlipped ? "boof" : "off"}</h1>
-        <div className="card-container" onClick={toggleFlipDirection}>
+        <div
+          className={`card-container ${difficulty}`}
+          onClick={toggleFlipDirection}
+        >
+          {/* If the current card object's image value is not null, AND the card is flipped, THEN display the image */}
+          {CARD_DATA[currentCard].img && isFlipped && (
+            <img id="card-img" src={CARD_DATA[currentCard].img} />
+          )}
           <h1>
             {!isFlipped
               ? `${CARD_DATA[currentCard].question}`
