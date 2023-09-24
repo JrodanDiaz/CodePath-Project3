@@ -28,16 +28,23 @@ body {
 }
 
 .header {
+  width: 500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.header span {
+  color: rgb(195, 12, 12);
 }
 
 .cards-wrapper {
-  padding: 30px;
-  margin: 30px;
+  padding: 20px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
