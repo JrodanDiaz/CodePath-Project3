@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Cards from "./components/Cards";
@@ -12,7 +12,7 @@ function App() {
   };
 
   const updateLongestStreak = () => {
-    if (currentStreak > longestStreak) {
+    if (currentStreak >= longestStreak) {
       setLongestStreak(currentStreak);
     }
   };

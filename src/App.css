@@ -132,3 +132,7 @@ body {
   padding: 5px 10px;
   background-color: rgb(255, 218, 87);
 }
+
+.incorrect {
+  border: 3px solid red;
+}

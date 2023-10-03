@@ -1,8 +1,8 @@
-# Web Development Project 2 - Ultimate Guitar Test
+# Web Development Project 3 - Ultimate Guitar Test 2
 
 Submitted by: Jordan Diaz
 
-This web app: An interactive flashcard display, that tests the user on their knowledge of guitar and music history
+This web app: An interactive flashcard display, that tests the user on their knowledge of guitar and music history. Now shuffles the cards, and remembers the order so you can navigate forward and backwards through a defined, randomized order of cards. Added shuffle functionality.
 
 Time spent: 2 hours spent in total
 
@@ -10,38 +10,35 @@ Time spent: 2 hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [x] Cards contains images in addition to or in place of text
-- [x] Cards have different visual styles such as color based on their category
+- [x] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
-- [x] Added a display that shows the number of the card you're on
-- [x] Added a "PreviousCard" state, that ensures the random number generator doesn't generate the same number consecutively
+- [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
-
-![WalkthroughCodePathProject2](https://github.com/JrodanDiaz/CodePath-Project2/assets/129818825/9697a4b6-5d19-4dd5-919e-396a6abc9e57)
+Here's a walkthrough of implemented user stories:
 
 GIF created with LiceCap
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-None.
 
 ## License
 
-    Copyright 2026 Jordan Diaz
+    Copyright 2023 Jordan Diaz
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

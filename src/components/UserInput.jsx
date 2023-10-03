@@ -5,6 +5,8 @@ export default function UserInput({
   correctAnswer,
   updateStreaks,
   resetStreak,
+  isCorrect,
+  setCorrectness,
 }) {
   const [answer, setAnswer] = useState("");
 
@@ -19,18 +21,20 @@ export default function UserInput({
     e.preventDefault();
     if (answer == correctAnswer) {
       updateStreaks();
+      //if inCorrect = true, the class "incorrect" is added to the text-input
     } else {
       resetStreak();
+      setCorrectness(false);
     }
   };
 
   return (
     <div className="user-input-wrapper">
-      <form action="" onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
           placeholder="Enter Answer"
-          className="ans-input"
+          className={`ans-input ${!isCorrect ? `incorrect` : ``}`}
           onChange={handleAnswerChange}
         />
         <button type="submit" className="submit-btn">
