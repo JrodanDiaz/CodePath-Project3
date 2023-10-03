@@ -1,7 +1,7 @@
 import BlackStrat from "../assets/blackstrat.png";
 import LesPaul from "../assets/lespaul.png";
 
-export default function Header() {
+export default function Header({ currentStreak, longestStreak }) {
   return (
     <>
       <div className="header-wrapper">
@@ -15,6 +15,9 @@ export default function Header() {
             guitar and music history
           </h2>
           <h3>Number of cards: 11</h3>
+          <h3>
+            Current Streak: {currentStreak} | Longest Streak: {longestStreak}
+          </h3>
         </div>
         <img src={LesPaul} id="les-paul" />
       </div>

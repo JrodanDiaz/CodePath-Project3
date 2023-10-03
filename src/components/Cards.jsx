@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "../App.css";
 import CARD_DATA from "../assets/CARD_DATA.JSX";
+import UserInput from "./UserInput";
 
-function Cards() {
+// eslint-disable-next-line react/prop-types
+function Cards({ updateStreaks, resetStreak }) {
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, toggleFlipped] = useState(false);
-  const [prevCard, setPrevCard] = useState(0);
 
   const difficulty = CARD_DATA[currentCard].difficulty;
 
@@ -14,15 +15,11 @@ function Cards() {
   // Ensures that the same number cannot be random generated consecutively
   const generateUniqueRandom = () => {
     randomNum = 1 + Math.round(Math.random() * 9);
-    while (randomNum === prevCard) {
-      randomNum = 1 + Math.round(Math.random() * 9);
-    }
   };
 
   const handleNextCard = () => {
     generateUniqueRandom();
-    setCurrentCard((c) => randomNum);
-    setPrevCard(randomNum);
+    setCurrentCard(randomNum);
     if (isFlipped) {
       toggleFlipDirection();
     }
@@ -65,6 +62,13 @@ function Cards() {
           <button onClick={handleNextCard} className="card-btn">
             →
           </button>
+        </div>
+        <div className="btn-container">
+          <UserInput
+            correctAnswer={CARD_DATA[currentCard].answer}
+            updateStreaks={updateStreaks}
+            resetStreak={resetStreak}
+          />
         </div>
       </div>
     </>

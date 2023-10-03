@@ -43,8 +43,9 @@ body {
 }
 
 .cards-wrapper {
-  padding: 20px;
-  margin: 15px;
+  padding: 20px 20px 0px 20px;
+  /* margin: 15px; */
+  margin: 15px 15px 0px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,4 +108,27 @@ body {
 .card-btn:hover {
   color: #000;
   background: rgb(255, 218, 87);
+}
+
+/* ============================================================ */
+/* USER INPUT VVV */
+/* ============================================================ */
+
+.user-input-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.ans-input {
+  border: none;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+}
+
+.submit-btn {
+  border: none;
+  padding: 5px 10px;
+  background-color: rgb(255, 218, 87);
 }

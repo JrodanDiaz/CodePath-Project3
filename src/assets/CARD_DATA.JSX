@@ -11,14 +11,14 @@ const CARD_DATA = [
   },
   {
     question: "What year was the first mass-produced electric guitar made?",
-    answer: "In 1950, by Fender",
+    answer: "In 1950 by Fender",
     difficulty: "medium",
   },
   {
     question:
       "What is the main difference in sound between single-coil pickups, and humbuckers?",
     answer:
-      "Single coils have a brighter, crisper tone, whereas humbuckers have a darker, thicker sound.",
+      "Single coils have a brighter, crisper tone, whereas humbuckers have a darker, thicker sound",
     difficulty: "easy",
   },
   {
@@ -45,13 +45,13 @@ const CARD_DATA = [
     question:
       "What is the most obvious difference between a guitar and a bass?",
     answer:
-      "A guitar typically has six strings, whereas a bass typically has four.",
+      "A guitar typically has six strings, whereas a bass typically has four",
     difficulty: "easy",
   },
   {
     question:
       "The blueprint concept of the Fender JagStang was submitted to Fender by which famous 90's musician?",
-    answer: "Kurt Cobain, of Nirvana",
+    answer: "Kurt Cobain",
     difficulty: "medium",
     img: JagStang,
   },
@@ -65,8 +65,7 @@ const CARD_DATA = [
   {
     question:
       "Who is widely considered the most influential guitarist of all time?",
-    answer:
-      "Jimi Hendrix, who influenced both the development and popularization of the guitar thanks to him constantly pushing the boundaries of the noises a guitar could make.",
+    answer: "Jimi Hendrix",
     difficulty: "medium",
   },
   {
