@@ -30,6 +30,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+![WalkthroughCodePathProject3](https://github.com/JrodanDiaz/CodePath-Project3/assets/129818825/b84b2fc0-56fb-440e-99f6-013bf2ee4a06)
+
 GIF created with LiceCap
 
 ## Notes
